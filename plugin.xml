@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-navi" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+  <name>Navi</name>
+  <js-module name="Navi" src="www/Navi.js">
+    <clobbers target="Navi" />
+  </js-module>
+  
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="Navi">
+        <param name="android-package" value="com.contron.cordova.navi.Navi" />
+      </feature>
+    </config-file>
+	
+    <config-file parent="/*" target="AndroidManifest.xml" />
+    <source-file src="src/android/Navi.java" target-dir="src/com/contron/cordova/navi/Navi" />
+  </platform>
+  
+  <platform name="ios">
+    <config-file parent="/*" target="config.xml">
+      <feature name="Navi">
+        <param name="ios-package" value="Navi" />
+      </feature>
+    </config-file>
+	
+	<config-file parent="LSApplicationQueriesSchemes" target="*-Info.plist">
+	  <array>
+		  <string>iosamap</string>		  
+	  </array>
+	</config-file>
+	
+    <source-file src="src/ios/Navi.h" />
+	<source-file src="src/ios/Navi.m" />
+	
+  </platform>
+</plugin>
