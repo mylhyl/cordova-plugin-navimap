@@ -25,7 +25,8 @@
 	
 	<config-file parent="LSApplicationQueriesSchemes" target="*-Info.plist">
 	  <array>
-		  <string>iosamap</string>		  
+		  <string>iosamap</string>
+		  <string>baidumap</string>
 	  </array>
 	</config-file>
 	
