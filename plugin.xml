@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="cordova-plugin-navi" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
   <name>Navi</name>
+  <description>Cordova Navi Plugin call app,use Baidu Map APP and Amap App</description>
+  <license>Apache 2.0</license>
   <js-module name="Navi" src="www/Navi.js">
     <clobbers target="Navi" />
   </js-module>
