@@ -1,26 +1,44 @@
 # cordova-plugin-navi
-ionic2 cordova 导航插件，调用高德和百度APP，支持Android和ios
+ionic cordova 导航插件，URI方式调用高德和百度APP，支持Android和ios
 # 使用
 
 高德地图[uri api](http://lbs.amap.com/api/amap-mobile/gettingstarted)
 ```javascript
-  //android平台
-  Navi.amapRoute('amapuri://route/plan/?sourceApplication=APP名称&dlat=39.98848272&dlon=116.47560823&dname=中村关&dev=0&t=0'
-    , res => { }
-    , err => { }
-  );
-  
-  //ios平台
-  Navi.amapRoute('iosamap://path?sourceApplication=APP名称&dlat=39.98848272&dlon=116.47560823&dname=中村关&dev=0&t=0'
-      , res => { }
-      , err => { }
+    //引用导航插件
+    declare let Navi;
+    //android平台
+    Navi.amapRoute('amapuri://route/plan/?sourceApplication=APP名称'+
+    '&dlat=39.98848272&dlon=116.47560823&dname=中村关&dev=0&t=0'
+        , res => {
+            //成功
+        }
+        , err => {
+            //失败
+        }
+    );
+
+    //ios平台
+    Navi.amapRoute('iosamap://path?sourceApplication=APP名称'+
+    '&dlat=39.98848272&dlon=116.47560823&dname=中村关&dev=0&t=0'
+        , res => {
+            //成功
+         }
+        , err => {
+            //失败
+        }
     );
 ```
 百度地图[uri api](http://lbsyun.baidu.com/index.php?title=uri)
 ```javascript
-    Navi.bdmapRoute('baidumap://map/direction?destination=latlng:39.9761,116.3282|name:中关村&mode=driving'
-      , res => { }
-      , err => { }
+    //
+    Navi.bdmapRoute('baidumap://map/direction?'+
+    'destination=latlng:39.9761,116.3282|name:中关村&mode=driving'
+      , res => {
+          //成功
+       }
+      , err => {
+          //失败
+      }
     );
 ```
 
@@ -47,8 +65,8 @@ export class NaviServ {
         return new Promise<string>((resolve, reject) => {
 
             if (this.fileServ.isAndroid()) {
-                Navi.amapRoute('amapuri://route/plan/?sourceApplication=APP名称&dlat=' + dlat +
-                    '&dlon=' + dlon + '&dname=' + dname + '&dev=0&t=0',
+                Navi.amapRoute('amapuri://route/plan/?sourceApplication=APP名称&dlat=' + dlat + 
+                '&dlon=' + dlon + '&dname=' + dname + '&dev=0&t=0',
                     res => {
                         resolve(res);
                     },
@@ -77,7 +95,8 @@ export class NaviServ {
         return new Promise<string>((resolve, reject) => {
 
             if (this.fileServ.isAndroid()) {
-                Navi.bdmapRoute('baidumap://map/direction?destination=latlng:' + dlat + ',' + dlon + '|name:' + dname+'&mode=driving',
+                Navi.bdmapRoute('baidumap://map/direction?destination=latlng:' + dlat + 
+                ',' + dlon + '|name:' + dname+'&mode=driving',
                     res => {
                         resolve(res);
                     },
@@ -85,7 +104,8 @@ export class NaviServ {
                         reject(err);
                     });
             } else {
-                Navi.bdmapRoute('baidumap://map/direction?destination=latlng:' + dlat + ',' + dlon + '|name:' + dname +'&mode=driving',
+                Navi.bdmapRoute('baidumap://map/direction?destination=latlng:' + dlat + 
+                ',' + dlon + '|name:' + dname +'&mode=driving',
                     res => {
                         resolve(res);
                     }, err => {
