@@ -1,0 +1,28 @@
+{
+  "name": "cordova-plugin-navi",
+  "version": "1.0.0",
+  "description": "Cordova Navi Plugin call app,use Baidu Map APP and Amap App",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mylhyl/cordova-plugin-navi.git"
+  },
+  "keywords": [
+    "cordova",
+    "baidu",
+    "amap",
+    "navi",
+    "device",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "hupei",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/mylhyl/cordova-plugin-navi/issues"
+  },
+  "homepage": "https://github.com/mylhyl/cordova-plugin-navi#readme"
+}
