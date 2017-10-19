@@ -1,6 +1,6 @@
 #import <Cordova/CDVPlugin.h>
 
-@interface Navi : CDVPlugin
+@interface NaviMap : CDVPlugin
 
 - (void)amapRoute:(CDVInvokedUrlCommand*)command;
 - (void)bdmapRoute:(CDVInvokedUrlCommand*)command;

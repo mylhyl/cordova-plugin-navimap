@@ -1,27 +1,27 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-navi" version="1.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
-  <name>Navi</name>
-  <description>Cordova Navi Plugin call app,use Baidu Map APP and Amap App</description>
+<plugin id="cordova-plugin-naviMap" version="1.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+  <name>NaviMap</name>
+  <description>Cordova NaviMap Plugin call app,use Baidu Map APP and Amap App</description>
   <license>Apache 2.0</license>
-  <js-module name="Navi" src="www/Navi.js">
-    <clobbers target="cordova.navi" />
+  <js-module name="NaviMap" src="www/NaviMap.js">
+    <clobbers target="cordova.naviMap" />
   </js-module>
   
   <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
-      <feature name="Navi">
-        <param name="android-package" value="com.contron.cordova.navi.Navi" />
+      <feature name="NaviMap">
+        <param name="android-package" value="com.contron.cordova.navimap.NaviMap" />
       </feature>
     </config-file>
 	
     <config-file parent="/*" target="AndroidManifest.xml" />
-    <source-file src="src/android/Navi.java" target-dir="src/com/contron/cordova/navi/Navi" />
+    <source-file src="src/android/NaviMap.java" target-dir="src/com/contron/cordova/navimap/NaviMap" />
   </platform>
   
   <platform name="ios">
     <config-file parent="/*" target="config.xml">
-      <feature name="Navi">
-        <param name="ios-package" value="Navi" />
+      <feature name="NaviMap">
+        <param name="ios-package" value="NaviMap" />
       </feature>
     </config-file>
 	
@@ -32,8 +32,8 @@
 	  </array>
 	</config-file>
 	
-    <source-file src="src/ios/Navi.h" />
-	<source-file src="src/ios/Navi.m" />
+    <source-file src="src/ios/NaviMap.h" />
+	<source-file src="src/ios/NaviMap.m" />
 	
   </platform>
 </plugin>

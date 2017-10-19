@@ -1,7 +1,7 @@
-#import "Navi.h"
+#import "NaviMap.h"
 #import <Cordova/CDVPluginResult.h>
 
-@implementation Navi
+@implementation NaviMap
 
 - (void)amapRoute:(CDVInvokedUrlCommand*)command
 {

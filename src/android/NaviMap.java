@@ -1,4 +1,4 @@
-package com.contron.cordova.navi;
+package com.contron.cordova.navimap;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,7 +17,7 @@ import org.json.JSONException;
  * Created by hupei on 2017/10/11.
  */
 
-public final class Navi extends CordovaPlugin {
+public final class NaviMap extends CordovaPlugin {
     private Context mContext;
     private CallbackContext mCallback;
 
