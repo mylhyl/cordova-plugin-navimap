@@ -1,4 +1,4 @@
-# cordova-plugin-naviMap
+# cordova-plugin-navimap
 ionic cordova 导航插件，URI方式调用高德和百度APP，支持Android和ios
 # 使用
 

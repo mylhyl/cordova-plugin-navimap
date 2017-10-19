@@ -1,5 +1,5 @@
 {
-  "name": "cordova-plugin-naviMap",
+  "name": "cordova-plugin-navimap",
   "version": "1.0.0",
   "description": "Cordova NaviMap Plugin call app,use Baidu Map APP and Amap App",
   "scripts": {
@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mylhyl/cordova-plugin-naviMap.git"
+    "url": "git+https://github.com/mylhyl/cordova-plugin-navimap.git"
   },
   "keywords": [
     "cordova",
@@ -22,7 +22,7 @@
   "author": "hupei",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/mylhyl/cordova-plugin-naviMap/issues"
+    "url": "https://github.com/mylhyl/cordova-plugin-navimap/issues"
   },
-  "homepage": "https://github.com/mylhyl/cordova-plugin-naviMap#readme"
+  "homepage": "https://github.com/mylhyl/cordova-plugin-navimap#readme"
 }
