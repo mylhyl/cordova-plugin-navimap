@@ -1,6 +1,13 @@
 # cordova-plugin-navimap
 ionic cordova 导航插件，URI方式调用高德和百度APP，支持Android和ios
-# 使用
+
+# 安装
+
+```bash
+ionic cordova plugin add cordova-plugin-navimap --save
+```
+
+# cordova使用
 
 高德地图[uri api](http://lbs.amap.com/api/amap-mobile/gettingstarted)
 ```javascript

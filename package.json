@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-navimap",
-  "version": "1.0.0",
+  "version": "1.2.2",
   "description": "Cordova NaviMap Plugin call app,use Baidu Map APP and Amap App",
   "scripts": {
     "test": ""
