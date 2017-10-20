@@ -5,9 +5,9 @@ ionic cordova 导航插件，URI方式调用高德和百度APP，支持Android�
 高德地图[uri api](http://lbs.amap.com/api/amap-mobile/gettingstarted)
 ```javascript
     //引用导航插件
-    declare let cordova.naviMap;
+    declare let cordovaNaviMap;
     //android平台
-    cordova.naviMap.amapRoute('amapuri://route/plan/?sourceApplication=APP名称'+
+    cordovaNaviMap.amapRoute('amapuri://route/plan/?sourceApplication=APP名称'+
     '&dlat=39.98848272&dlon=116.47560823&dname=中村关&dev=0&t=0'
         , res => {
             //成功
@@ -18,7 +18,7 @@ ionic cordova 导航插件，URI方式调用高德和百度APP，支持Android�
     );
 
     //ios平台
-    cordova.naviMap.amapRoute('iosamap://path?sourceApplication=APP名称'+
+    cordovaNaviMap.amapRoute('iosamap://path?sourceApplication=APP名称'+
     '&dlat=39.98848272&dlon=116.47560823&dname=中村关&dev=0&t=0'
         , res => {
             //成功
@@ -31,7 +31,7 @@ ionic cordova 导航插件，URI方式调用高德和百度APP，支持Android�
 百度地图[uri api](http://lbsyun.baidu.com/index.php?title=uri)
 ```javascript
     //
-    cordova.naviMap.bdmapRoute('baidumap://map/direction?'+
+    cordovaNaviMap.bdmapRoute('baidumap://map/direction?'+
     'destination=latlng:39.9761,116.3282|name:中关村&mode=driving'
       , res => {
           //成功
@@ -46,7 +46,7 @@ ionic cordova 导航插件，URI方式调用高德和百度APP，支持Android�
 ```javascript
 import { Injectable } from '@angular/core';
 import { FileServ } from '../../providers/common/FileServ';
-declare let cordova.naviMap;
+declare let cordovaNaviMap;
 
 @Injectable()
 export class NaviMapServ {
@@ -65,7 +65,7 @@ export class NaviMapServ {
         return new Promise<string>((resolve, reject) => {
 
             if (this.fileServ.isAndroid()) {
-                cordova.naviMap.amapRoute('amapuri://route/plan/?sourceApplication=APP名称&dlat=' + dlat + 
+                cordovaNaviMap.amapRoute('amapuri://route/plan/?sourceApplication=APP名称&dlat=' + dlat + 
                 '&dlon=' + dlon + '&dname=' + dname + '&dev=0&t=0',
                     res => {
                         resolve(res);
@@ -95,7 +95,7 @@ export class NaviMapServ {
         return new Promise<string>((resolve, reject) => {
 
             if (this.fileServ.isAndroid()) {
-                cordova.naviMap.bdmapRoute('baidumap://map/direction?destination=latlng:' + dlat + 
+                cordovaNaviMap.bdmapRoute('baidumap://map/direction?destination=latlng:' + dlat + 
                 ',' + dlon + '|name:' + dname+'&mode=driving',
                     res => {
                         resolve(res);
@@ -104,7 +104,7 @@ export class NaviMapServ {
                         reject(err);
                     });
             } else {
-                cordova.naviMap.bdmapRoute('baidumap://map/direction?destination=latlng:' + dlat + 
+                cordovaNaviMap.bdmapRoute('baidumap://map/direction?destination=latlng:' + dlat + 
                 ',' + dlon + '|name:' + dname +'&mode=driving',
                     res => {
                         resolve(res);
