@@ -3,8 +3,13 @@ ionic cordova 导航插件，URI方式调用高德和百度APP，支持Android�
 
 # 安装
 
+npm
 ```bash
-ionic cordova plugin add cordova-plugin-navimap --save
+cordova plugin add cordova-plugin-navimap
+```
+github
+```bash
+cordova plugin add https://github.com/mylhyl/cordova-plugin-navimap.git
 ```
 
 # cordova使用
