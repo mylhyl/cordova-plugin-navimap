@@ -22,10 +22,13 @@ cordova plugin add https://github.com/mylhyl/cordova-plugin-navimap.git
     cordovaNaviMap.amapRoute('amapuri://route/plan/?sourceApplication=APP名称'+
     '&dlat=39.98848272&dlon=116.47560823&dname=中村关&dev=0&t=0'
         , res => {
-            //成功
+            //成功可以不处理
+            console.log(res);
         }
         , err => {
             //失败
+            alert(err);
+            console.log(err);
         }
     );
 
